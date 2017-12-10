@@ -41,7 +41,11 @@ Plug 'godlygeek/tabular'
 Plug 'luochen1990/indent-detector.vim'
 
 " Code Related
-Plug 'edsono/vim-matchit'
+Plug 'vim-scripts/matchit.zip'
+Plug 'dsawardekar/ember.vim'
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'pangloss/vim-javascript'
+Plug 'gregsexton/matchtag'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'mattn/emmet-vim'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -54,6 +58,7 @@ Plug 'tpope/vim-git'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'vim-scripts/closetag.vim'
 Plug 'vim-scripts/css_color'
+Plug 'mustache/vim-mustache-handlebars'
 
 " UI
 Plug 'bling/vim-airline'
@@ -217,4 +222,4 @@ set cmdheight=1
 
 " NERDTree
 """""""""""""
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
