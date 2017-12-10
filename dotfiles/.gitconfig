@@ -1,0 +1,44 @@
+[alias]
+	c = commit -am
+	s = status
+	st = status
+	co = checkout
+	br = branch
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[diff]
+	tool = default-difftool
+
+[difftool "default-difftool"]
+	cmd = code --wait --diff --new-window $LOCAL $REMOTE
+
+[user]
+	name = Mirko May
+	email = mail@mirkomay.com
+
+[github]
+	user = mayko780
