@@ -16,7 +16,6 @@ brew install dockutil
 brew install htop
 brew install rbenv
 brew install nvm
-brew install python
 brew install zsh
 
 # Extra
