@@ -24,6 +24,10 @@ xcode-select --install
 mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
 export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
 
+# Install Python
+sudo easy_install pip
+sudo pip install psutil
+sudo pip install wakatime
 
 # Install brew packages
 ./scripts/brew.sh
