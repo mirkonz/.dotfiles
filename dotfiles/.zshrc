@@ -11,6 +11,8 @@ antigen bundle brew
 antigen bundle brew-cask
 antigen bundle common-aliases
 antigen bundle composer
+antigen bundle docker
+antigen bundle docker-compose
 antigen bundle gem
 antigen bundle git
 antigen bundle npm
@@ -18,11 +20,27 @@ antigen bundle nvm
 antigen bundle rbenv
 antigen bundle z
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen bundle ael-code/zsh-colored-man-pages
+antigen bundle akoenig/npm-run.plugin.zsh
+antigen bundle chrissicool/zsh-256color
 antigen bundle desyncr/auto-ls
+antigen bundle djui/alias-tips
+antigen bundle felixr/docker-zsh-completion
+antigen bundle horosgrisa/zsh-dropbox
+antigen bundle jhipster/jhipster-oh-my-zsh-plugin
+antigen bundle littleq0903/gcloud-zsh-completion
+antigen bundle lukechilds/zsh-better-npm-completion
+antigen bundle paulmelnikow/zsh-startup-timer
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle unixorn/rake-completion.zshplugin
+antigen bundle vasyharan/zsh-brew-services
+antigen bundle wbingli/zsh-wakatime
+
+antigen bundle iam4x/zsh-iterm-touchbar
 
 AUTO_LS_COMMANDS=(custom_function)
 auto-ls-custom_function () {
@@ -70,6 +88,11 @@ POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='green'
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
+
+# Autoload gcloud completion
+fpath=($ANTIGEN_BUNDLES/littleq0903/gcloud-zsh-completion/src $fpath)
+autoload -U compinit compdef
+compinit
 
 ################################################################
 # ZSH options
