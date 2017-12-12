@@ -1,0 +1,23 @@
+# field #   meaning        allowed values
+# -------   ------------   --------------
+#    1      minute         0-59
+#    2      hour           0-23
+#    3      day of month   1-31
+#    4      month          1-12 (or names, see below)
+#    5      day of week    0-7 (0 or 7 is Sun, or use names)
+
+#=====================================================================#
+#  1  |  2  |  3  |  4  |  5  |  Command               #
+#=====================================================================#
+
+  */5    *     *     *     *     $HOME/.dotfiles/cron/every-5-minutes.sh > /dev/null 2>&1
+
+   0     *     *     *     *     $HOME/.dotfiles/cron/every-hour.sh > /dev/null 2>&1
+
+   0     4     *     *     *     $HOME/.dotfiles/cron/every-day.sh > /dev/null 2>&1
+
+   0     5     *     *     1     $HOME/.dotfiles/cron/every-week.sh > /dev/null 2>&1
+
+   0     6     1     *     *     $HOME/.dotfiles/cron/every-month.sh > /dev/null 2>&1
+
+#=====================================================================#

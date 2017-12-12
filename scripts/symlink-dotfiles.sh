@@ -14,6 +14,7 @@ create_symlinks() {
         "dotfiles/.npmrc"
         "dotfiles/.vimrc"
         "dotfiles/.zshrc"
+        "dotfiles/crontab"
     )
 
     local i=""
