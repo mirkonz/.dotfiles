@@ -1,7 +1,8 @@
-# Run in terminal:
-# env EDITOR=nano crontab -e
+# To enable crontab run:
+# 'env EDITOR=nano crontab -e'
 # Copy script below and save.
-# Successful when  => crontab: installing new crontab
+# Successful when => crontab: installing new crontab
+# Check with 'crontab -l'
 
 # field #   meaning        allowed values
 # -------   ------------   --------------
