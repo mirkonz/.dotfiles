@@ -131,5 +131,5 @@ source $(brew --prefix nvm)/nvm.sh
 eval "$(rbenv init -)"
 # source "$(dirname $(gem which colorls))/tab_complete.sh"
 
-source ~/.secrid_aliases
-source ~/.aliases
+source "${HOME}/.secrid_aliases"
+source "${HOME}/.aliases"
