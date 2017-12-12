@@ -25,7 +25,7 @@ dockutil --no-restart --add "/Applications/Fabric.app"
 dockutil --no-restart --add "/Applications/KeePassX.app"
 dockutil --no-restart --add '' --type spacer --section apps --after KeePassX
 dockutil --no-restart --add "/Applications/Sketch.app"
-dockutil --no-restart --add "/Applications/Adobe Lightroom Classic CC/Adobe Lightroom Classic CC.app"
+dockutil --no-restart --add "/Applications/Adobe Lightroom CC/Adobe Lightroom CC.app"
 dockutil --no-restart --add "/Applications/Adobe Photoshop CC 2018/Adobe Photoshop CC 2018.app"
 dockutil --no-restart --add "/Applications/Adobe Illustrator CC 2018/Adobe Illustrator.app"
 dockutil --no-restart --add "/Applications/Adobe Premiere Pro CC 2018/Adobe Premiere Pro CC 2018.app"
