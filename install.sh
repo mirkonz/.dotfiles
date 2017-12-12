@@ -53,3 +53,8 @@ sh .macos
 
 # Symlinks dropbox dotfiles into ~/
 ./scripts/symlink-dotfiles-dropbox.sh
+
+echo "Installation complete."
+
+echo "Just one more thing."
+echo "Create crontab manually (symlink does not work). Please see 'crontab' file."
