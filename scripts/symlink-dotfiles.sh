@@ -12,6 +12,8 @@ create_symlinks() {
         "dotfiles/.gitconfig"
         "dotfiles/.gitignore_global"
         "dotfiles/.npmrc"
+        "dotfiles/.powerlevel9k"
+        "dotfiles/.spaceship"
         "dotfiles/.vimrc"
         "dotfiles/.zshrc"
         "dotfiles/crontab"
