@@ -47,11 +47,11 @@ auto-ls-custom_function () {
 
 # antigen theme iam4x/zsh-iterm-touchbar
 
-# source "$HOME/.powerlevel9k"
-# antigen theme bhilburn/powerlevel9k powerlevel9k
+source "$HOME/.powerlevel9k"
+antigen theme bhilburn/powerlevel9k powerlevel9k
 
-source "$HOME/.spaceship"
-antigen theme denysdovhan/spaceship-zsh-theme spaceship
+# source "$HOME/.spaceship"
+# antigen theme denysdovhan/spaceship-zsh-theme --branch=3.0 spaceship
 
 # ANTIGEN_LOG="$HOME/antigen.log"
 antigen apply
