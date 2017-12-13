@@ -23,6 +23,7 @@ brew install composer
 brew install homebrew/apache/httpd24 --with-http2 --with-privileged-ports
 brew install homebrew/php/php70 --with-httpd24
 brew install kubernetes-cli
+brew install lastpass-cli --with-pinentry --with-doc
 brew install mysql
 brew install multitail
 brew install ssh-copy-id
