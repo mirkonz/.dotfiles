@@ -64,7 +64,7 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 10
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Disable shadow in screenshots
