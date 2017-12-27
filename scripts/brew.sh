@@ -15,6 +15,7 @@ brew install coreutils
 brew install dockutil
 brew install htop
 brew install rbenv
+brew install node
 brew install nvm
 brew install zsh
 
