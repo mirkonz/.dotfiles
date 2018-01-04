@@ -1,4 +1,4 @@
-alias reload="source $HOME/.zshrc; echo \"\ue2a2 Done!\""
+alias reload="source $HOME/.zshrc; echo -e \"\ue2a2 Done!\""
 alias edit="$EDITOR $HOME/.zshrc $HOME/.aliases"
 
 alias l="colorls -lA --sd --gs"
@@ -10,6 +10,8 @@ alias tree="colorls --tree --sd --gs -A --report"
 
 alias mk="take"
 alias md="take"
+
+alias e="ember"
 
 alias brewup="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew doctor; brew prune; npm-check -g -u"
 alias upgrade="brewup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document"
