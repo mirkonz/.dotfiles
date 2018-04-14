@@ -1,12 +1,12 @@
 alias reload="source $HOME/.zshrc; echo -e \"\ue2a2 Done!\""
 alias edit="$EDITOR $HOME/.zshrc $HOME/.aliases"
 
-alias l="colorls -lA --sd --gs"
-alias ll="colorls -lA --sd --gs --report"
-alias ls="colorls --sd --report"
-alias la="colorls -la --sd --gs --report"
-alias t="colorls --tree --dirs --sd --gs --report"
-alias tree="colorls --tree --sd --gs -A --report"
+# alias l="colorls -lA --sd --gs"
+# alias ll="colorls -lA --sd --gs --report"
+# alias ls="colorls --sd --report"
+# alias la="colorls -la --sd --gs --report"
+# alias t="colorls --tree --dirs --sd --gs --report"
+# alias tree="colorls --tree --sd --gs -A --report"
 
 alias mk="take"
 alias md="take"

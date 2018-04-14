@@ -1,4 +1,5 @@
 #!/bin/sh
 
 npm i -g ember-cli
-npm install -g jshint
+npm i -g eslint
+npm i -g jshint

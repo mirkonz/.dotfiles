@@ -29,6 +29,10 @@ sudo easy_install pip
 sudo pip install psutil
 sudo pip install wakatime
 
+# Stop and unload pre-installed apache
+sudo apachectl stop
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
+
 # Install brew packages
 ./scripts/brew.sh
 
@@ -46,7 +50,6 @@ sh .macos
 
 # Setup Mac Dock
 ./scripts/macos_dock.sh
-
 
 # Symlinks dotfiles into ~/
 ./scripts/symlink-dotfiles.sh

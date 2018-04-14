@@ -4,7 +4,6 @@ echo "Installing brew packages..."
 
 brew tap 'homebrew/versions'
 brew tap 'homebrew/dupes'
-brew tap 'homebrew/php'
 
 brew update
 brew upgrade
@@ -19,19 +18,23 @@ brew install node
 brew install nvm
 brew install zsh
 
+# Apache, PHP, MySQL
+brew install httpd
+brew install mysql
+brew install php@7.2
+
 # Extra
 brew install composer
-brew install homebrew/apache/httpd24 --with-http2 --with-privileged-ports
-brew install homebrew/php/php70 --with-httpd24
 brew install kubernetes-cli
 brew install lastpass-cli --with-pinentry --with-doc
-brew install mysql
 brew install multitail
 brew install ssh-copy-id
 brew install wget --with-iri
 brew install watchman
 brew install yarn
 
+sudo brew services restart httpd
+brew services restart php@7.2
 brew services restart mysql
 
 # Remove outdated versions from the cellar.

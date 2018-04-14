@@ -1,3 +1,4 @@
 #!/bin/bash
 
-rsync -aunv ~/Dropbox/Work/* ~/Work
+rsync -aunv ~/Dropbox/.work/* ~/Work
+
