@@ -13,8 +13,8 @@ alias md="take"
 
 alias e="ember"
 
-alias brewup="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew doctor; brew prune; npm-check -g -u"
-alias upgrade="brewup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document"
+alias brewup="brew -v update && brew upgrade --force-bottle && brew cleanup && brew cask cleanup && brew doctor && brew prune && npm-check -g -u"
+alias upgrade="brewup && npm i -g npm && npm update -g && sudo gem update --system && sudo gem update --no-document"
 
 alias hosts="sudo $EDITOR /etc/hosts"
 alias vhosts="sudo $EDITOR /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"

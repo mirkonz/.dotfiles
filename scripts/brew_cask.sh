@@ -28,11 +28,11 @@ brew cask install --appdir="/Applications" safari-technology-preview
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" sketch
 brew cask install --appdir="/Applications" sketchup
-brew cask install --appdir="/Applications" sourcetree
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" visual-studio-code
 brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" xquartz
+brew cask install --appdir="/Applications" fork
 
 brew cask install google-cloud-sdk
 
