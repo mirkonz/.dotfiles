@@ -19,12 +19,17 @@ brew install nvm
 brew install zsh
 
 # Apache, PHP, MySQL
-brew install httpd
-brew install mysql
-brew install php@7.2
+# brew install httpd
+# brew install mysql
+# brew install php@7.2
 
 # Extra
+brew install brew-cask-completion
 brew install composer
+brew install docker
+brew install docker-completion
+brew install docker-compose
+brew install docker-compose-completion
 brew install kubernetes-cli
 brew install lastpass-cli --with-pinentry --with-doc
 brew install multitail
@@ -33,9 +38,9 @@ brew install wget --with-iri
 brew install watchman
 brew install yarn
 
-sudo brew services restart httpd
-brew services restart php@7.2
-brew services restart mysql
+# sudo brew services restart httpd
+# brew services restart php@7.2
+# brew services restart mysql
 
 # Remove outdated versions from the cellar.
 brew cleanup

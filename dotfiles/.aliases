@@ -1,12 +1,19 @@
 alias reload="source $HOME/.zshrc; echo -e \"\ue2a2 Done!\""
 alias edit="$EDITOR $HOME/.zshrc $HOME/.aliases"
 
-# alias l="colorls -lA --sd --gs"
-# alias ll="colorls -lA --sd --gs --report"
-# alias ls="colorls --sd --report"
-# alias la="colorls -la --sd --gs --report"
-# alias t="colorls --tree --dirs --sd --gs --report"
-# alias tree="colorls --tree --sd --gs -A --report"
+alias l="colorls -lA --sd --gs"
+alias ll="colorls -lA --sd --gs --report"
+alias ls="colorls --sd --report"
+alias la="colorls -la --sd --gs --report"
+alias t="colorls --tree --dirs --sd --gs --report"
+alias tree="colorls --tree --sd --gs -A --report"
+
+createMovieBarcode() {
+    rm -rf ~/movieBarcodeImages/ && mkdir ~/movieBarcodeImages/ &&
+    ffmpeg -i "`find /Volumes/video/movies -iname "*$1*" -type f -print -quit`" -vf scale=1:1 -r 1 ~/movieBarcodeImages/%06d.png &&
+    # find /Volumes/video/movies -iname "*$1*" -type f -print -quit -exec ffmpeg -i {} -vf scale=1:1 -r 1 ~/movieBarcodeImages/%06d.png \; &&
+    convert +append "~/movieBarcodeImages/*.png" movieBarcode.png;
+}
 
 alias mk="take"
 alias md="take"
@@ -21,4 +28,11 @@ alias vhosts="sudo $EDITOR /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
 alias httpdconf="sudo $EDITOR /usr/local/etc/apache2/2.4/httpd.conf"
 alias phpini="sudo $EDITOR /usr/local/etc/php/5.6/php.ini"
 
-alias e="ember"
+
+alias vm="gcloud compute --project \"mirkomay-01\" ssh --zone \"asia-east1-c\" \"debian\""
+alias nasty="ssh nasty.voodwale.nz -p 2222"
+# alias rasp="ssh pi@raspberrypi.local"
+alias rasp1="ssh pi@rasp1.local"
+alias rasp2="ssh pi@rasp2.local"
+alias hassio="ssh hassio@hassio.local"
+alias nuc="ssh mirko@nuc.local"

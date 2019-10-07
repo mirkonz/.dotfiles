@@ -27,7 +27,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle akoenig/npm-run.plugin.zsh
 antigen bundle chrissicool/zsh-256color
-antigen bundle desyncr/auto-ls
+# antigen bundle desyncr/auto-ls
 antigen bundle djui/alias-tips
 antigen bundle felixr/docker-zsh-completion
 antigen bundle horosgrisa/zsh-dropbox
@@ -40,10 +40,10 @@ antigen bundle unixorn/rake-completion.zshplugin
 antigen bundle vasyharan/zsh-brew-services
 antigen bundle wbingli/zsh-wakatime
 
-AUTO_LS_COMMANDS=(custom_function)
-auto-ls-custom_function () {
-    colorls -lA --sd --gs --report
-}
+# AUTO_LS_COMMANDS=(custom_function)
+# auto-ls-custom_function () {
+#     colorls -lA --sd --gs --report
+# }
 
 # antigen theme iam4x/zsh-iterm-touchbar
 
@@ -75,10 +75,12 @@ export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
+
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$(brew --prefix)/bin:$PATH
-export PATH="/usr/local/opt/php@7.0/bin:$PATH"
-export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
+# export PATH="/usr/local/opt/php@7.0/bin:$PATH"
+# export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
 
 export ANT_HOME="/usr/local/opt/ant"
 export MAVEN_HOME="/usr/local/opt/maven"
@@ -99,5 +101,5 @@ source $(brew --prefix nvm)/nvm.sh
 eval "$(rbenv init -)"
 # source "$(dirname $(gem which colorls))/tab_complete.sh"
 
-source "${HOME}/.secrid_aliases"
+
 source "${HOME}/.aliases"

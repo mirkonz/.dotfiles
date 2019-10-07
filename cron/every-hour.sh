@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rsync -avz --exclude='.DS_Store' --filter="dir-merge,- .gitignore" ~/Work/* ~/Dropbox/.work
+# rsync -avz --exclude='.DS_Store' --filter="dir-merge,- .gitignore" ~/Work/* ~/Dropbox/.work
 
 
 
