@@ -77,18 +77,8 @@ export PATH=/usr/local/sbin:$PATH
 
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
-export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$(brew --prefix)/bin:$PATH
-# export PATH="/usr/local/opt/php@7.0/bin:$PATH"
-# export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
 
-export ANT_HOME="/usr/local/opt/ant"
-export MAVEN_HOME="/usr/local/opt/maven"
-export GRADLE_HOME="/usr/local/opt/gradle"
-
-export PATH=$ANT_HOME/bin:$PATH
-export PATH=$MAVEN_HOME/bin:$PATH
-export PATH=$GRADLE_HOME/bin:$PATH
 
 # NVM NODE
 export NVM_DIR="$HOME/.nvm"

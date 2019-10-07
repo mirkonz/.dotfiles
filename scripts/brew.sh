@@ -2,9 +2,6 @@
 
 echo "Installing brew packages..."
 
-brew tap 'homebrew/versions'
-brew tap 'homebrew/dupes'
-
 brew update
 brew upgrade
 
@@ -12,16 +9,14 @@ brew upgrade
 brew install antigen
 brew install coreutils
 brew install dockutil
+brew install ffmpeg
 brew install htop
+brew install imagemagick
 brew install rbenv
 brew install node
 brew install nvm
+brew install vim
 brew install zsh
-
-# Apache, PHP, MySQL
-# brew install httpd
-# brew install mysql
-# brew install php@7.2
 
 # Extra
 brew install brew-cask-completion
@@ -31,16 +26,12 @@ brew install docker-completion
 brew install docker-compose
 brew install docker-compose-completion
 brew install kubernetes-cli
-brew install lastpass-cli --with-pinentry --with-doc
+brew install lastpass-cli --with-doc
 brew install multitail
 brew install ssh-copy-id
-brew install wget --with-iri
+brew install wget
 brew install watchman
 brew install yarn
-
-# sudo brew services restart httpd
-# brew services restart php@7.2
-# brew services restart mysql
 
 # Remove outdated versions from the cellar.
 brew cleanup

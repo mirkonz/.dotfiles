@@ -8,13 +8,13 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 create_symlinks() {
 
     declare -a FILES_TO_SYMLINK=(
-        ".dotfiles/.secrid_aliases"
         ".dotfiles/.npmrcs"
         ".dotfiles/.ssh"
         ".dotfiles/.wakatime.cfg"
         ".dotfiles/.viminfo"
         ".dotfiles/.vim"
         ".dotfiles/.z"
+        ".dotfiles/.zsh_history"
     )
 
     local i=""

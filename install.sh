@@ -19,19 +19,13 @@ sudo softwareupdate -i -a
 # Install Command Line Tools for Xcode (Available on a fresh install of macOS)
 xcode-select --install
 
-
-# Install homebrew in ~/.homebrew
-mkdir $HOME/.homebrew && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
-export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install Python
 sudo easy_install pip
 sudo pip install psutil
 sudo pip install wakatime
-
-# Stop and unload pre-installed apache
-sudo apachectl stop
-sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
 
 # Install brew packages
 ./scripts/brew.sh
