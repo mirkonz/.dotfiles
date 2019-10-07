@@ -8,6 +8,7 @@ brew upgrade
 # Core
 brew install antigen
 brew install coreutils
+brew install cpulimit
 brew install dockutil
 brew install ffmpeg
 brew install htop
