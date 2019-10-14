@@ -29,6 +29,7 @@ brew install docker-compose-completion
 brew install kubernetes-cli
 brew install lastpass-cli --with-doc
 brew install multitail
+brew install potrace
 brew install ssh-copy-id
 brew install watchman
 brew install wget

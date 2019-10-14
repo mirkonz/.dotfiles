@@ -5,6 +5,7 @@ echo "Installing cask applications..."
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
+brew tap buo/cask-upgrade
 
 brew cask install font-firacode-nerd-font
 
@@ -35,6 +36,7 @@ brew cask install --appdir="/Applications" plex-media-player
 brew cask install --appdir="/Applications" screens-connect
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" sketchup
+brew cask install --appdir="/Applications" sonos
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" steam
 brew cask install --appdir="/Applications" synology-drive
