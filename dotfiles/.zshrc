@@ -27,7 +27,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle akoenig/npm-run.plugin.zsh
 antigen bundle chrissicool/zsh-256color
-# antigen bundle desyncr/auto-ls
 antigen bundle djui/alias-tips
 antigen bundle felixr/docker-zsh-completion
 antigen bundle horosgrisa/zsh-dropbox
@@ -39,11 +38,6 @@ antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle unixorn/rake-completion.zshplugin
 antigen bundle vasyharan/zsh-brew-services
 antigen bundle wbingli/zsh-wakatime
-
-# AUTO_LS_COMMANDS=(custom_function)
-# auto-ls-custom_function () {
-#     colorls -lA --sd --gs --report
-# }
 
 # antigen theme iam4x/zsh-iterm-touchbar
 
