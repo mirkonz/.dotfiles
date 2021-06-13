@@ -7,14 +7,17 @@ brew upgrade
 
 # Core
 brew install antigen
+brew install brew-gem
 brew install coreutils
 brew install cpulimit
 brew install dockutil
 brew install ffmpeg
 brew install htop
 brew install imagemagick
+brew install jq
 brew install node
 brew install nvm
+brew install mpv # media player
 brew install rbenv
 brew install vim
 brew install zsh

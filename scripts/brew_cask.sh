@@ -7,46 +7,50 @@ brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
 brew tap buo/cask-upgrade
 
-brew cask install font-firacode-nerd-font
+brew install --cask font-firacode-nerd-font
 
-brew cask install --appdir="/Applications" adobe-creative-cloud
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" apptrap
-brew cask install --appdir="/Applications" balenaetcher
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" fantastical
-brew cask install --appdir="/Applications" fing
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" fork
-brew cask install --appdir="/Applications" fork
-brew cask install --appdir="/Applications" franz
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" google-chrome-canary
-brew cask install --appdir="/Applications" google-cloud-sdk
-brew cask install --appdir="/Applications" google-drive-file-stream
-brew cask install --appdir="/Applications" google-photos-backup-and-sync
-brew cask install --appdir="/Applications" imageoptim
-brew cask install --appdir="/Applications" imazing
-brew cask install --appdir="/Applications" istat-menus
-brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" mqttfx
-brew cask install --appdir="/Applications" namechanger
-brew cask install --appdir="/Applications" onyx
-brew cask install --appdir="/Applications" plex-media-player
-brew cask install --appdir="/Applications" screens-connect
-brew cask install --appdir="/Applications" sequel-pro
-brew cask install --appdir="/Applications" sketchup
-brew cask install --appdir="/Applications" sonos
-brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" steam
-brew cask install --appdir="/Applications" synology-drive
-brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" vlc
-brew cask install --appdir="/Applications" xquartz
+brew install --cask --appdir="/Applications" adobe-creative-cloud
+brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="/Applications" apptrap
+brew install --cask --appdir="/Applications" balenaetcher
+brew install --cask --appdir="/Applications" dropbox
+brew install --cask --appdir="/Applications" fantastical
+brew install --cask --appdir="/Applications" fing
+brew install --cask --appdir="/Applications" firefox
+brew install --cask --appdir="/Applications" fork
+brew install --cask --appdir="/Applications" franz
+brew install --cask --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" google-chrome-canary
+brew install --cask --appdir="/Applications" google-cloud-sdk
+brew install --cask --appdir="/Applications" google-drive-file-stream
+brew install --cask --appdir="/Applications" google-photos-backup-and-sync
+brew install --cask --appdir="/Applications" imageoptim
+brew install --cask --appdir="/Applications" iina
+brew install --cask --appdir="/Applications" imazing
+brew install --cask --appdir="/Applications" istat-menus
+brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" keepassxc
+brew install --cask --appdir="/Applications" keka
+brew install --cask --appdir="/Applications" libreoffice
+brew install --cask --appdir="/Applications" mqtt-explorer
+brew install --cask --appdir="/Applications" namechanger
+brew install --cask --appdir="/Applications" onyx
+brew install --cask --appdir="/Applications" plex-media-player
+brew install --cask --appdir="/Applications" screens-connect
+brew install --cask --appdir="/Applications" sequel-pro
+brew install --cask --appdir="/Applications" sketchup
+brew install --cask --appdir="/Applications" sonos
+brew install --cask --appdir="/Applications" spotify
+brew install --cask --appdir="/Applications" spotmenu
+brew install --cask --appdir="/Applications" steam
+brew install --cask --appdir="/Applications" synology-drive
+brew install --cask --appdir="/Applications" visual-studio-code
+brew install --cask --appdir="/Applications" vlc
+brew install --cask --appdir="/Applications" xquartz
 
-brew cask install google-cloud-sdk
+brew install --cask google-cloud-sdk
 
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 
 sleep 1
 echo "Success! Cask applications are installed."

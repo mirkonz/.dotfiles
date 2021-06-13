@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo softwareupdate -i -a
 
 # Install Command Line Tools for Xcode (Available on a fresh install of macOS)
-xcode-select --install
+sudo xcode-select --install
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
