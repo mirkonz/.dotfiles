@@ -1,5 +1,3 @@
-POWERLEVEL9K_INSTANT_PROMPT=off
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -16,10 +14,7 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle brew
-antigen bundle brew-cask
 antigen bundle common-aliases
-antigen bundle composer
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle gem
@@ -33,20 +28,20 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen bundle ael-code/zsh-colored-man-pages
-antigen bundle akoenig/npm-run.plugin.zsh
-antigen bundle chrissicool/zsh-256color
-antigen bundle djui/alias-tips
-antigen bundle felixr/docker-zsh-completion
-antigen bundle horosgrisa/zsh-dropbox
-antigen bundle jhipster/jhipster-oh-my-zsh-plugin
-antigen bundle littleq0903/gcloud-zsh-completion
-antigen bundle lukechilds/zsh-better-npm-completion
-antigen bundle paulmelnikow/zsh-startup-timer
-antigen bundle unixorn/autoupdate-antigen.zshplugin
-antigen bundle unixorn/rake-completion.zshplugin
-antigen bundle vasyharan/zsh-brew-services
-antigen bundle wbingli/zsh-wakatime
+# antigen bundle ael-code/zsh-colored-man-pages
+# antigen bundle akoenig/npm-run.plugin.zsh
+# antigen bundle chrissicool/zsh-256color
+# antigen bundle djui/alias-tips
+# antigen bundle felixr/docker-zsh-completion
+# antigen bundle horosgrisa/zsh-dropbox
+# antigen bundle jhipster/jhipster-oh-my-zsh-plugin
+# antigen bundle littleq0903/gcloud-zsh-completion
+# antigen bundle lukechilds/zsh-better-npm-completion
+# antigen bundle paulmelnikow/zsh-startup-timer
+# antigen bundle unixorn/autoupdate-antigen.zshplugin
+# antigen bundle unixorn/rake-completion.zshplugin
+# antigen bundle vasyharan/zsh-brew-services
+# antigen bundle wbingli/zsh-wakatime
 
 # antigen theme iam4x/zsh-iterm-touchbar
 
@@ -62,9 +57,9 @@ antigen theme romkatv/powerlevel10k
 antigen apply
 
 # Autoload gcloud completion
-fpath=($ANTIGEN_BUNDLES/littleq0903/gcloud-zsh-completion/src $fpath)
-autoload -U compinit compdef
-compinit
+# fpath=($ANTIGEN_BUNDLES/littleq0903/gcloud-zsh-completion/src $fpath)
+# autoload -U compinit compdef
+# compinit
 
 ################################################################
 # ZSH options
@@ -80,9 +75,10 @@ export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-export PATH=$HOME/Library/Python/2.7/bin:$PATH
+# export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
 export PATH=$(brew --prefix)/bin:$PATH
+export PATH=$(brew --prefix)/sbin:$PATH
 
 
 # NVM NODE
@@ -92,10 +88,21 @@ export NVM_DIR="$HOME/.nvm"
 
 source $(brew --prefix nvm)/nvm.sh
 
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 # RUBY
 eval "$(rbenv init -)"
 # source "$(dirname $(gem which colorls))/tab_complete.sh"
-
 
 source "${HOME}/.aliases"
 

@@ -1,57 +1,55 @@
 #!/bin/sh
 
+PROMPT_TIMEOUT = 15
+
 ################################################################
 # Install new user for MacOS
 ################################################################
+install_apps () {
 
-# Make zsh your default shell
-chsh -s /bin/zsh
+  # # Make zsh your default shell
+  # chsh -s /bin/zsh
 
-# Ask for the administrator password upfront
-sudo -v
+  # Ask for the administrator password upfront
+  sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+  # Keep-alive: update existing `sudo` time stamp until finished
+  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Update software
-sudo softwareupdate -i -a
+  # Update software
+  sudo softwareupdate -i -a
 
-# Install Command Line Tools for Xcode (Available on a fresh install of macOS)
-sudo xcode-select --install
+  # Install Command Line Tools for Xcode (Available on a fresh install of macOS)
+  sudo xcode-select --install
 
-# Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  # Install Homebrew
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Install Python
-sudo easy_install pip
-sudo pip install psutil
-sudo pip install wakatime
+  brew update
+  brew upgrade
+  brew bundle --global --file ./dotfiles/Brewfile
 
-# Install brew packages
-./scripts/brew.sh
+  # Setup Mac System defaults
+  sh .macos
 
-# Install cask packages
-./scripts/brew_cask.sh
+  # Setup Mac Dock
+  ./scripts/macos_dock.sh
 
-# Install Mac App Store packages
-./scripts/mas.sh
+  # Symlinks dotfiles into ~/
+  ./scripts/symlink-dotfiles.sh
 
-# Install NPM packages
-./scripts/npm.sh
+  # Symlinks dropbox dotfiles into ~/
+  # ./scripts/symlink-dotfiles-dropbox.sh
 
-# Setup Mac System defaults
-sh .macos
+  echo "Installation complete."
 
-# Setup Mac Dock
-./scripts/macos_dock.sh
+  echo "Just one more thing."
+  echo "In order to run cronjobs you need to run `crontab` manually (symlinks do NOT work). Please see 'crontab' file."
+}
 
-# Symlinks dotfiles into ~/
-./scripts/symlink-dotfiles.sh
-
-# Symlinks dropbox dotfiles into ~/
-./scripts/symlink-dotfiles-dropbox.sh
-
-echo "Installation complete."
-
-echo "Just one more thing."
-echo "Create crontab manually (symlink does not work). Please see 'crontab' file."
+# Confirm user is happy to proceed with package installations
+echo -e "\nDid you create a backup? (y/N)"
+read -t $PROMPT_TIMEOUT -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  install_apps
+fi

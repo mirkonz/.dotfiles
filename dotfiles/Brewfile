@@ -1,0 +1,107 @@
+# Brew tabs
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/cask-drivers"
+tap "buo/cask-upgrade"
+
+############
+# BREW
+############
+
+# Utility functions
+brew "binutils"
+brew "coreutils"
+brew "diffutils"
+brew "dockutil"
+
+# System functions
+brew "antigen"
+brew "curl", link: true
+brew "htop"
+brew "jq"
+brew "yq"
+brew "rsync"
+brew "ssh-copy-id"
+brew "tree"
+brew "vim", args: ["with-override-system-vi"]
+brew "wget"
+
+# Development
+brew "brew-gem"
+brew "nvm"
+brew "git"
+brew "rbenv"
+brew "yarn"
+
+# Image & video
+brew "ffmpeg"
+brew "imagemagick"
+
+brew "mas"
+brew "whalebrew"
+
+
+############
+# CASK
+############
+
+cask "affinity-designer"
+cask "affinity-photo"
+cask "alfred"
+cask "apptrap"
+cask "balenaetcher"
+cask "discord"
+cask "docker-toolbox"
+cask "docker"
+cask "dropbox"
+cask "google-chrome"
+cask "google-drive-file-stream"
+cask "google-photos-backup-and-sync"
+cask "iina"
+cask "imageoptim"
+cask "iterm2"
+cask "keepassxc"
+cask "keka"
+cask "mqtt-explorer"
+cask "obs"
+cask "rectangle"
+cask "screens-connect"
+cask "spotify"
+cask "spotmenu"
+cask "stats"
+cask "steam"
+cask "visual-studio-code"
+cask "vivaldi"
+cask "zoom"
+
+# Fonts
+cask "font-firacode-nerd-font"
+
+# Quicklook
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"
+cask "quicklookase"
+cask "qlvideo"
+
+
+############
+# MAS
+############
+
+mas "Amphetamine", id: 937984704
+mas "AutoMounter", id: 1160435653
+mas 'Boxy SVG', id: 611658502
+mas "LittleIpsum", id: 405772121
+mas "Hidden Bar", id: 1452453066
+mas "Steam Link", id: 1246969117
+mas "Slack", id: 803453959
+mas "Telegram", id: 747648890
+mas "VPN Unlimited - WiFi Proxy", id: 727593140

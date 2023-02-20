@@ -18,8 +18,6 @@ createMovieBarcode() {
 alias mk="take"
 alias md="take"
 
-alias e="ember"
-
 
 alias brewup="brew upgrade --force-bottle && brew cleanup && brew cask cleanup && brew doctor && brew prune && npm-check -g -u"
 alias caskup="brew upgrade --cask --greedy"
@@ -28,10 +26,6 @@ alias gemup="sudo gem update --system && sudo gem update --no-document"
 alias upgrade="brew -v update && brewup && brew doctor && npm i -g npm && npm update -g && "
 
 alias hosts="sudo $EDITOR /etc/hosts"
-alias vhosts="sudo $EDITOR /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf"
-alias httpdconf="sudo $EDITOR /usr/local/etc/apache2/2.4/httpd.conf"
-alias phpini="sudo $EDITOR /usr/local/etc/php/5.6/php.ini"
-
 
 alias vm="gcloud compute --project \"mirkomay-01\" ssh --zone \"asia-east1-c\" \"debian\""
 alias nasty="ssh nasty.voodwale.synology.me -p 2222" #alias nasty="ssh nasty.local -p 2222"
