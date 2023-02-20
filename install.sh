@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROMPT_TIMEOUT = 15
+PROMPT_TIMEOUT=15
 
 ################################################################
 # Install new user for MacOS
@@ -48,8 +48,8 @@ install_apps () {
 }
 
 # Confirm user is happy to proceed with package installations
-# echo -e "\nDid you create a backup? (y/N)"
-# read -t $PROMPT_TIMEOUT -n 1 -r
-# if [[ $REPLY =~ ^[Yy]$ ]]; then
+echo -e "\nDid you create a backup? (y/N)"
+read -t $PROMPT_TIMEOUT -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
   install_apps
-# fi
+fi
