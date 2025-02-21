@@ -1,23 +1,32 @@
 alias reload="source $HOME/.zshrc; echo -e \"\ue2a2 Done!\""
 alias edit="$EDITOR $HOME/.zshrc $HOME/.aliases"
 
-alias l="colorls -lA --sd --gs"
-alias ll="colorls -lA --sd --gs --report"
-alias ls="colorls --sd --report"
-alias la="colorls -la --sd --gs --report"
-alias t="colorls --tree --dirs --sd --gs --report"
-alias tree="colorls --tree --sd --gs -A --report"
 
-createMovieBarcode() {
-    rm -rf ~/movieBarcodeImages/ && mkdir ~/movieBarcodeImages/ &&
-    ffmpeg -i "`find /Volumes/video/movies -iname "*$1*" -type f -print -quit`" -vf scale=1:1 -r 1 ~/movieBarcodeImages/%06d.png &&
-    # find /Volumes/video/movies -iname "*$1*" -type f -print -quit -exec ffmpeg -i {} -vf scale=1:1 -r 1 ~/movieBarcodeImages/%06d.png \; &&
-    convert +append "~/movieBarcodeImages/*.png" movieBarcode.png;
-}
+# Override defaults
+
+# alias cd="z"
+
+# alias l="exa -la --group-directories-first --icons"
+# alias ls="exa -ah --icons"
+# alias la="exa -lagh --group-directories-first --icons"
+# alias ll="exa -laghmuU --group-directories-first --icons"
+alias t="exa -Tl --icons"
+alias tree="exa -T --icons"
+
+alias vi="nvim"
+alias vim="nvim"
+alias _vim="vi"
+
+alias cat="bat"
 
 alias mk="take"
 alias md="take"
 
+alias ytd="yt-dlp"
+
+ytg() {
+    yt-dlp -F $1
+}
 
 alias brewup="brew upgrade --force-bottle && brew cleanup && brew cask cleanup && brew doctor && brew prune && npm-check -g -u"
 alias caskup="brew upgrade --cask --greedy"

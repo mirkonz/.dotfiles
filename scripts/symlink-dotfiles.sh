@@ -13,7 +13,7 @@ create_symlinks() {
         "dotfiles/.gitignore_global"
         "dotfiles/.npmrc"
         # "dotfiles/.powerlevel9k"
-        "dotfiles/.prettierrc"
+        # "dotfiles/.prettierrc"
         # "dotfiles/.p10k.zsh"
         "dotfiles/.vimrc"
         "dotfiles/.zshrc"

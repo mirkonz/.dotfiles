@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH="$HOME/bin:$PATH"
+
 # ANTIGEN_CACHE=false
 source $(brew --prefix)/share/antigen/antigen.zsh
 
@@ -14,15 +16,23 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle common-aliases
+antigen bundle brew
+antigen bundle command-not-found
+# antigen bundle common-aliases
 antigen bundle docker
 antigen bundle docker-compose
+antigen bundle dotenv
 antigen bundle gem
 antigen bundle git
+# antigen bundle gh
+antigen bundle iterm2
 antigen bundle npm
 antigen bundle nvm
+antigen bundle pyenv
 antigen bundle rbenv
+# antigen bundle tmux
 antigen bundle z
+
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
@@ -65,40 +75,25 @@ antigen apply
 # ZSH options
 ################################################################
 
-export EDITOR="code"
-
-export PATH=$HOME/bin:$PATH
-export PATH=/bin:$PATH
-export PATH=/sbin:$PATH
-export PATH=/usr/bin:$PATH
-export PATH=/usr/sbin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-
-# export PATH=$HOME/Library/Python/2.7/bin:$PATH
-
-export PATH=$(brew --prefix)/bin:$PATH
-export PATH=$(brew --prefix)/sbin:$PATH
 
 
 # NVM NODE
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-source $(brew --prefix nvm)/nvm.sh
 
 autoload -U add-zsh-hook
 load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    nvm use
-  elif [[ $(nvm version) != $(nvm version default)  ]]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        nvm use
+        elif [[ $(nvm version) != $(nvm version default)  ]]; then
+        echo "Reverting to nvm default version"
+        nvm use default
+    fi
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
 
 # RUBY
 eval "$(rbenv init -)"
@@ -106,5 +101,16 @@ eval "$(rbenv init -)"
 
 source "${HOME}/.aliases"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# pnpm
+export PNPM_HOME="${HOME}/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
